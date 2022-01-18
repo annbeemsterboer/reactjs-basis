@@ -17,6 +17,7 @@
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.0",
     "@types/react": "17.0.37",
+    "autoprefixer": "^10.4.2",
     "config": "*",
     "eslint": "7.32.0",
     "next-transpile-modules": "9.0.0",
