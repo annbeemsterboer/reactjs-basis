@@ -1,0 +1,43 @@
+ul {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+  margin: 0 auto;
+  max-width: 40rem;
+}
+
+li {
+  background: linear-gradient(
+    to bottom right,
+    hsl(259, 100%, 71%),
+    hsl(257, 80%, 60%)
+  );
+  border-radius: 50px;
+  width: 50px;
+  height: 50px;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grijs {
+  background: linear-gradient(
+    to bottom right,
+    hsl(259, 0%, 71%),
+    hsl(257, 0%, 60%)
+  );
+}
+
+.groen {
+  background: linear-gradient(
+    to bottom right,
+    hsl(100, 100%, 71%),
+    hsl(100, 80%, 60%)
+  );
+}
