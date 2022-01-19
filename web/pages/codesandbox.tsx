@@ -21,7 +21,7 @@ export default function Web() {
         <ul>
           <li>
             <a
-              href="https://stackblitz.com/github/vnglst/basistraining-react/tree/main/opdrachten/createElement?file=/src/main.jsx"
+              href="https://codesandbox.io/s/github/vnglst/basistraining-react/tree/main/opdrachten/createElement?file=/src/main.jsx"
               target="_blank"
               rel="noreferrer"
             >
@@ -31,7 +31,7 @@ export default function Web() {
 
           <li>
             <a
-              href="https://stackblitz.com/github/vnglst/basistraining-react/tree/main/opdrachten/createElement-oplossing?file=/src/main.jsx"
+              href="https://codesandbox.io/s/github/vnglst/basistraining-react/tree/main/opdrachten/createElement-oplossing?file=/src/main.jsx"
               target="_blank"
               rel="noreferrer"
             >
@@ -41,7 +41,7 @@ export default function Web() {
 
           <li>
             <a
-              href="https://stackblitz.com/github/vnglst/basistraining-react/tree/main/opdrachten/createElement-oplossing-jsx?file=/src/main.jsx"
+              href="https://codesandbox.io/s/github/vnglst/basistraining-react/tree/main/opdrachten/createElement-oplossing-jsx?file=/src/main.jsx"
               target="_blank"
               rel="noreferrer"
             >
@@ -63,7 +63,7 @@ export default function Web() {
         <ul>
           <li>
             <a
-              href="https://stackblitz.com/github/vnglst/basistraining-react/tree/main/opdrachten/lijsten?file=/src/App.jsx"
+              href="https://codesandbox.io/s/github/vnglst/basistraining-react/tree/main/opdrachten/lijsten?file=/src/App.jsx"
               target="_blank"
               rel="noreferrer"
             >
@@ -72,7 +72,7 @@ export default function Web() {
           </li>
           <li>
             <a
-              href="https://stackblitz.com/github/vnglst/basistraining-react/tree/main/opdrachten/lijsten-oplossing?file=/src/App.jsx"
+              href="https://codesandbox.io/s/github/vnglst/basistraining-react/tree/main/opdrachten/lijsten-oplossing?file=/src/App.jsx"
               target="_blank"
               rel="noreferrer"
             >
