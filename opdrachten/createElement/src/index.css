@@ -16,6 +16,7 @@ html {
 #root {
   height: 100%;
   display: flex;
+  background: black;
 }
 
 .card {
@@ -31,4 +32,8 @@ html {
 h1 {
   font-size: 64px;
   font-weight: bold;
+}
+
+div {
+  background: white;
 }

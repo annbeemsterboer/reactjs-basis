@@ -1,7 +1,9 @@
 export default function Web() {
   return (
     <article className="prose lg:prose-xl mx-auto mt-10">
-      <h1>Opdracht createElement</h1>
+      <h1>Opdrachten</h1>
+
+      <h2>createElement</h2>
 
       <p>
         Met deze opdracht krijg je een beter inzicht in hoe React eigelijk
@@ -33,6 +35,16 @@ export default function Web() {
             rel="noreferrer"
           >
             Oplossing
+          </a>
+        </li>
+
+        <li>
+          <a
+            href="https://codesandbox.io/s/github/vnglst/basistraining-react/tree/main/opdrachten/createElement-oplossing-jsx?file=/src/main.jsx"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Oplossing met JSX
           </a>
         </li>
       </ul>
