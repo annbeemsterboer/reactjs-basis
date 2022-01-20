@@ -112,6 +112,24 @@ export default function Web() {
           </li>
         </ul>
       </article>
+
+      <article>
+        <h2>Denken in componenten</h2>
+
+        <p>Met deze opdracht...</p>
+
+        <ul>
+          <li>
+            <a
+              href="https://stackblitz.com/github/vnglst/basistraining-react/tree/main/opdrachten/denken-in-componenten-oplossing?file=/src/App.jsx"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Oplossing
+            </a>
+          </li>
+        </ul>
+      </article>
     </main>
   );
 }
