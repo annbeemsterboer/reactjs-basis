@@ -81,6 +81,37 @@ export default function Web() {
           </li>
         </ul>
       </article>
+
+      <article>
+        <h2>Webformulier met JSX</h2>
+
+        <p>Met deze opdracht...</p>
+
+        <p>
+          In de onderstaande Codesandbox is alvast een beginnetje gemaakt...
+        </p>
+
+        <ul>
+          <li>
+            <a
+              href="https://stackblitz.com/github/vnglst/basistraining-react/tree/main/opdrachten/geboortedatum?file=/src/App.jsx"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Opdracht webformulier met JSX
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://stackblitz.com/github/vnglst/basistraining-react/tree/main/opdrachten/geboortedatum-oplossing?file=/src/App.jsx"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Oplossing
+            </a>
+          </li>
+        </ul>
+      </article>
     </main>
   );
 }
