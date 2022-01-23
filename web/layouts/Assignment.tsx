@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import Container from "../components/Container";
 import type { PropsWithChildren } from "react";
 import type { Assignment } from ".contentlayer/types";
@@ -19,6 +17,16 @@ export default function AssignmentLayout({
           <h1 className="mb-4 text-3xl font-bold tracking-tight text-black md:text-5xl">
             {assignment.title}
           </h1>
+          <div className="flex gap-2 flex-wrap">
+            {assignment.tags.map((tag) => (
+              <span
+                key={tag}
+                className="inline-block px-2 py-1 leading-none rounded-full font-semibold uppercase tracking-wide text-xs bg-gray-200 text-gray-800"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
           <section className="w-full prose max-w-none">{children}</section>
         </div>
       </article>

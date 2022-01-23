@@ -23,10 +23,15 @@ const Assignment = defineDocumentType(() => ({
   bodyType: "mdx",
   fields: {
     title: { type: "string", required: true },
-    category: { type: "string", required: true },
     summary: { type: "string", required: true },
     imgSrc: { type: "string", required: true },
     order: { type: "number", required: true },
+    tags: {
+      type: "list",
+      required: false,
+      default: [],
+      of: { type: "string" },
+    },
   },
   computedFields,
 }));

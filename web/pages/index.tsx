@@ -1,8 +1,8 @@
 import { allAssignments } from ".contentlayer/data";
-import Container from "../components/Container";
-import { AssignmentCard } from "../components/AssignmentCard";
-import { pick } from "../utils/pick";
+import { pick } from "contentlayer/client";
 import type { InferGetStaticPropsType } from "next";
+import { AssignmentCard } from "../components/AssignmentCard";
+import Container from "../components/Container";
 
 export default function Web({
   assignments,
@@ -23,8 +23,8 @@ export default function Web({
               title={assignment.title}
               imgSrc={assignment.imgSrc}
               summary={assignment.summary}
-              category={assignment.category}
               url={assignment.slug}
+              tags={assignment.tags}
             />
           ))}
         </div>
@@ -35,14 +35,7 @@ export default function Web({
 
 export function getStaticProps() {
   const assignments = allAssignments.map((assignment) =>
-    pick(assignment, [
-      "slug",
-      "title",
-      "imgSrc",
-      "summary",
-      "category",
-      "order",
-    ])
+    pick(assignment, ["slug", "title", "imgSrc", "summary", "order", "tags"])
   );
 
   const sorted = assignments.sort((a, b) => {
