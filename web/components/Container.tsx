@@ -56,6 +56,17 @@ export default function Container(props) {
       >
         {children}
       </main>
+      <footer className="flex w-full">
+        <span className="text-gray-500 text-right text-xs p-4 ml-auto">
+          v. {process.env.APP_VERSION} |{" "}
+          <a
+            className="underline"
+            href={`https://github.com/vnglst/basistraining-react/tree/${process.env.COMMIT_HASH}`}
+          >
+            {process.env.COMMIT_HASH}
+          </a>
+        </span>
+      </footer>
     </div>
   );
 }
