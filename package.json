@@ -4,7 +4,7 @@
   "private": true,
   "workspaces": [
     "web",
-    "opdrachten/*",
+    "oefeningen/*",
     "packages/*"
   ],
   "scripts": {

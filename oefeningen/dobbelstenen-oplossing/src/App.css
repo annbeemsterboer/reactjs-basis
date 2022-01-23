@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.display {
+  font-weight: 100;
+  font-size: 20rem;
+  color: white;
+  text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.05);
+}
+
+button {
+  margin: 1em;
+  padding: 1em;
+  border: none;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 0.5em;
+  color: white;
+  font-size: 2em;
+  cursor: pointer;
+}
+
+button:hover {
+  background: rgba(0, 0, 0, 0.8);
+}

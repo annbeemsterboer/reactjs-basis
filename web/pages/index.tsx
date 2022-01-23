@@ -1,135 +1,53 @@
-export default function Web() {
+import { allAssignments } from ".contentlayer/data";
+import Container from "../components/Container";
+import { AssignmentCard } from "../components/AssignmentCard";
+import { pick } from "../utils/pick";
+import type { InferGetStaticPropsType } from "next";
+
+export default function Web({
+  assignments,
+}: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
-    <main className="prose lg:prose-xl mx-auto mt-10">
-      <h1>Opdrachten</h1>
-
-      <article>
-        <h2>createElement</h2>
-
-        <p>
-          Met deze opdracht krijg je een beter inzicht in hoe React eigelijk
-          werkt. Onderwater is een React-component namelijk niets anders dan een
-          functie die een DOM element maakt en toevoegt aan het virtuele DOM.
+    <Container title="Oefeningen - basistraining React">
+      <article className="flex flex-col items-start justify-center max-w-5xl mx-auto px-4">
+        <h1 className="mb-4 mt-16 text-3xl font-bold tracking-tight text-black md:text-5xl">
+          Oefeningen
+        </h1>
+        <p className="mb-4 text-gray-600">
+          {`Hieronder een verzameling oefeningen voor de basistraining van React.`}
         </p>
-
-        <p>
-          In de onderstaande Codesandbox is alvast een beginnetje gemaakt. Er
-          staat al een paarse rechthoek. Kun jij met grote letters hierin de
-          woorden &quot;Hallo wereld!&quot; schrijven?
-        </p>
-
-        <ul>
-          <li>
-            <a
-              href="https://stackblitz.com/github/vnglst/basistraining-react/tree/main/opdrachten/createElement?file=/src/main.jsx"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Opdracht createElement
-            </a>
-          </li>
-
-          <li>
-            <a
-              href="https://stackblitz.com/github/vnglst/basistraining-react/tree/main/opdrachten/createElement-oplossing?file=/src/main.jsx"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Oplossing
-            </a>
-          </li>
-
-          <li>
-            <a
-              href="https://stackblitz.com/github/vnglst/basistraining-react/tree/main/opdrachten/createElement-oplossing-jsx?file=/src/main.jsx"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Oplossing met JSX
-            </a>
-          </li>
-        </ul>
+        <div className="grid w-full grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 my-2 mt-4 mb-32">
+          {assignments.map((assignment) => (
+            <AssignmentCard
+              key={assignment.slug}
+              title={assignment.title}
+              imgSrc={assignment.imgSrc}
+              summary={assignment.summary}
+              category={assignment.category}
+              url={assignment.slug}
+            />
+          ))}
+        </div>
       </article>
-
-      <article>
-        <h2>Werken met lijsten</h2>
-
-        <p>Met deze opdracht...</p>
-
-        <p>
-          In de onderstaande Codesandbox is alvast een beginnetje gemaakt...
-        </p>
-
-        <ul>
-          <li>
-            <a
-              href="https://stackblitz.com/github/vnglst/basistraining-react/tree/main/opdrachten/lijsten?file=/src/App.jsx"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Opdracht lijsten
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://stackblitz.com/github/vnglst/basistraining-react/tree/main/opdrachten/lijsten-oplossing?file=/src/App.jsx"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Oplossing
-            </a>
-          </li>
-        </ul>
-      </article>
-
-      <article>
-        <h2>Webformulier met JSX</h2>
-
-        <p>Met deze opdracht...</p>
-
-        <p>
-          In de onderstaande Codesandbox is alvast een beginnetje gemaakt...
-        </p>
-
-        <ul>
-          <li>
-            <a
-              href="https://stackblitz.com/github/vnglst/basistraining-react/tree/main/opdrachten/geboortedatum?file=/src/App.jsx"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Opdracht webformulier met JSX
-            </a>
-          </li>
-          <li>
-            <a
-              href="https://stackblitz.com/github/vnglst/basistraining-react/tree/main/opdrachten/geboortedatum-oplossing?file=/src/App.jsx"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Oplossing
-            </a>
-          </li>
-        </ul>
-      </article>
-
-      <article>
-        <h2>Denken in componenten</h2>
-
-        <p>Met deze opdracht...</p>
-
-        <ul>
-          <li>
-            <a
-              href="https://stackblitz.com/github/vnglst/basistraining-react/tree/main/opdrachten/denken-in-componenten-oplossing?file=/src/App.jsx"
-              target="_blank"
-              rel="noreferrer"
-            >
-              Oplossing
-            </a>
-          </li>
-        </ul>
-      </article>
-    </main>
+    </Container>
   );
+}
+
+export function getStaticProps() {
+  const assignments = allAssignments.map((assignment) =>
+    pick(assignment, [
+      "slug",
+      "title",
+      "imgSrc",
+      "summary",
+      "category",
+      "order",
+    ])
+  );
+
+  const sorted = assignments.sort((a, b) => {
+    return a.order - b.order;
+  });
+
+  return { props: { assignments } };
 }
