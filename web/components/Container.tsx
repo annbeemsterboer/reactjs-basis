@@ -20,11 +20,11 @@ export default function Container(props) {
         <meta content={meta.description} name="description" />
         <meta
           property="og:url"
-          content={`https://basistraining-react.vercel.app/${router.asPath}`}
+          content={`https://basistrainingreact.vercel.app/${router.asPath}`}
         />
         <link
           rel="canonical"
-          href={`https://basistraining-react.vercel.app/${router.asPath}`}
+          href={`https://basistrainingreact.vercel.app/${router.asPath}`}
         />
         <meta property="og:type" content={meta.type} />
         <meta property="og:site_name" content="Basistraining React" />
@@ -61,7 +61,7 @@ export default function Container(props) {
           v. {process.env.APP_VERSION} |{" "}
           <a
             className="underline"
-            href={`https://github.com/vnglst/basistraining-react/tree/${process.env.COMMIT_HASH}`}
+            href={`https://github.com/competencefactory/basistraining-react/tree/${process.env.COMMIT_HASH}`}
           >
             {process.env.COMMIT_HASH}
           </a>
