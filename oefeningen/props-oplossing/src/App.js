@@ -4,18 +4,12 @@ import "./App.css";
 
 // oefening 1:
 
-const fruits = ["apple", "apple", "apple", "apple", "apple", "apple"];
-//of:
-//const fruits = Array(6).fill("apple");
-
 //Er zijn natuurlijk meerdere goede antwoorden/manieren mogelijk, dit is er slechts één.
 function App() {
   return (
     <div className="container">
       <div className="basket">
-        {fruits.map((fruit, index) => {
-          return <Fruit key={`${fruit}-${index}`} type={fruit} />;
-        })}
+        <Fruit type="apple" />;
       </div>
     </div>
   );
