@@ -8,28 +8,38 @@
 }
 
 .basket {
-  position: relative;
+  display: flex;
   width: 40em;
   height: 8em;
   border-bottom-left-radius: 110px;
   border-bottom-right-radius: 110px;
   border: 20px solid rgba(165, 42, 42, 0.803);
   border-top: 0;
+  padding: 0.5em;
 }
 
 .fruit {
-  position: absolute;
-  bottom: 1em;
-  left: 1em;
   background-size: contain;
+  background-repeat: no-repeat;
   height: 9em;
   width: 9em;
+  margin-left: -5em;
+  cursor: pointer;
+}
+
+.fruit:first-of-type {
+  margin: -1em;
 }
 
 .apple {
-  background-image: url("./components/apple.png");
+  background-image: url("./assets/apple.png");
 }
 
 .banana {
-  background-image: url("./components/banana.png");
+  background-image: url("./assets/banana.png");
+}
+
+.fruit--invisible {
+  background-image: none;
+  z-index: -1;
 }
