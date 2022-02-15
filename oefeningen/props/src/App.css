@@ -9,7 +9,7 @@
 
 .basket {
   position: relative;
-  width: 40em;
+  width: min(100vw - 5em, 40em);
   height: 8em;
   border-bottom-left-radius: 110px;
   border-bottom-right-radius: 110px;
@@ -27,9 +27,9 @@
 }
 
 .apple {
-  background-image: url("./components/apple.png");
+  background-image: url("https://basistrainingreact.vercel.app/apple.png");
 }
 
 .banana {
-  background-image: url("./components/banana.png");
+  background-image: url("https://basistrainingreact.vercel.app/banana.png");
 }

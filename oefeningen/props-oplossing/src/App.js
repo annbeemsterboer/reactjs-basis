@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="container">
       <div className="basket">
-        <Fruit type="apple" />;
+        <Fruit type="apple" />
       </div>
     </div>
   );
