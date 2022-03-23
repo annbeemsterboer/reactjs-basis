@@ -1,0 +1,28 @@
+body {
+  margin: 0;
+  font-family: "Gloria Hallelujah", cursive;
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+main {
+  padding: 16px;
+}
+
+h1 {
+  text-align: center;
+}
+
+wired-card {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  display: block;
+}
+
+section {
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  gap: 16px;
+}

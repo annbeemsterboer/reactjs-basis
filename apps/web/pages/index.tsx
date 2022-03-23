@@ -1,6 +1,6 @@
 import { allAssignments } from ".contentlayer/data";
 import { pick } from "contentlayer/client";
-import type { InferGetStaticPropsType } from "next";
+import { InferGetStaticPropsType } from "next";
 import { AssignmentCard } from "../components/AssignmentCard";
 import Container from "../components/Container";
 

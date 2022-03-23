@@ -2,9 +2,13 @@ import { useMDXComponent } from "next-contentlayer/hooks";
 import components from "../../components/MDXComponents";
 import AssignmentLayout from "../../layouts/Assignment";
 import { allAssignments } from ".contentlayer/data";
-import type { Assignment } from ".contentlayer/types";
+import { Assignment as AssignmentType } from ".contentlayer/types";
 
-export default function Assignment({ assignment }: { assignment: Assignment }) {
+export default function Assignment({
+  assignment,
+}: {
+  assignment: AssignmentType;
+}) {
   const Component = useMDXComponent(assignment.body.code);
 
   return (
