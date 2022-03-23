@@ -1,4 +1,5 @@
 const withTM = require("next-transpile-modules")(["ui"]);
+const { withContentlayer } = require("next-contentlayer");
 
 const pkg = require("./package.json");
 
@@ -7,11 +8,16 @@ const commitHash = require("child_process")
   .toString()
   .trim();
 
-module.exports = withTM({
-  swcMinify: true,
-  reactStrictMode: true,
-  env: {
-    APP_VERSION: pkg.version,
-    COMMIT_HASH: commitHash,
-  },
-});
+/**
+ * @type {import('next').NextConfig}
+ */
+module.exports = withContentlayer()(
+  withTM({
+    swcMinify: true,
+    reactStrictMode: true,
+    env: {
+      APP_VERSION: pkg.version,
+      COMMIT_HASH: commitHash,
+    },
+  })
+);

@@ -20,7 +20,7 @@ const computedFields: ComputedFields = {
 const Assignment = defineDocumentType(() => ({
   name: "Assignment",
   filePathPattern: "oefeningen/*.mdx",
-  bodyType: "mdx",
+  contentType: "mdx",
   fields: {
     title: { type: "string", required: true },
     summary: { type: "string", required: true },

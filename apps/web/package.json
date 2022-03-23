@@ -3,18 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "watch:content": "yarn contentlayer dev -c $PWD/contentlayer.config.ts",
     "dev": "next dev -p 2000",
     "build": "next build",
-    "prebuild": "yarn build:content",
-    "build:content": "yarn contentlayer build -c $PWD/contentlayer.config.ts",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
-    "contentlayer": "^0.0.34",
+    "contentlayer": "^0.1.2",
     "next": "12.1.0",
-    "next-contentlayer": "^0.0.34",
+    "next-contentlayer": "^0.1.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "rehype-autolink-headings": "^6.1.1",

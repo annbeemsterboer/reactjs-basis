@@ -1,6 +1,6 @@
 import Container from "../components/Container";
 import { PropsWithChildren } from "react";
-import { Assignment } from ".contentlayer/types";
+import { Assignment } from "../.contentlayer/generated";
 
 export default function AssignmentLayout({
   children,
