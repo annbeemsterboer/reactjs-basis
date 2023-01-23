@@ -8,14 +8,6 @@ const LIJST = [
 // oefening 1: toon alle getallen in een lijst, gebruik hiervoor de
 // html elementen <li> en <ul>.
 
-export default function App() {
-  return (
-    <ul>
-      <li></li>
-    </ul>
-  );
-}
-
 // oefening 2: Hetzelfde als oefening 1, maar toon nu alleen getallen die
 // deelbaar zijn door 2 (even getallen). Schrijf hiervoor een functie isEven
 // die je aanroept vanuit de App component.
