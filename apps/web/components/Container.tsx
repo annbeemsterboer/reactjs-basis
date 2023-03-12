@@ -1,16 +1,16 @@
-import Head from "next/head";
-import { useRouter } from "next/router";
+import Head from "next/head"
+import { useRouter } from "next/router"
 
 export default function Container(props) {
-  const { children, ...customMeta } = props;
-  const router = useRouter();
+  const { children, ...customMeta } = props
+  const router = useRouter()
   const meta = {
     title: "Basistraining React",
     description: "",
     image: "",
     type: "website",
     ...customMeta,
-  };
+  }
 
   return (
     <div className="bg-gray-100">
@@ -61,12 +61,12 @@ export default function Container(props) {
           v. {process.env.APP_VERSION} |{" "}
           <a
             className="underline"
-            href={`https://github.com/competencefactory/basistraining-react/tree/${process.env.COMMIT_HASH}`}
+            href={`https://github.com/annbeemsterboer/reactjs-basis/tree/${process.env.COMMIT_HASH}`}
           >
             {process.env.COMMIT_HASH}
           </a>
         </span>
       </footer>
     </div>
-  );
+  )
 }
