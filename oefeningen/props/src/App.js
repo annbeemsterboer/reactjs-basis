@@ -1,6 +1,6 @@
-import React from "react";
-import Fruit from "./components/Fruit";
-import "./App.css";
+import React from "react"
+import Fruit from "./components/Fruit"
+import "./App.css"
 
 /* oefening 1: Kun je ervoor zorgen dat de  code hieronder 1 appel
 in de fruitmand laat zien. Dit kun je doen door een prop met 
@@ -11,7 +11,7 @@ function App() {
     <div className="container">
       <div className="basket"></div>
     </div>
-  );
+  )
 }
 
 export default App;

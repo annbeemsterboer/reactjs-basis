@@ -1,0 +1,73 @@
+.container {
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.contact-list {
+  height: 100vh;
+  width: 20em;
+  background: #fff;
+}
+
+.contact-list button {
+  flex-grow: 1;
+  margin: 0;
+  padding: 0.5em;
+  border: none;
+  background: #fff;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.contact-list button:hover, button.active {
+  background: #efefef;
+}
+
+.chat {
+  position: relative;
+  width: calc(100vw - 20em);
+  height: calc(100vh - 6em);
+  padding-bottom: 6em;
+  background-color: #efeae2;
+  background-image: url("../public/bg-chat.png");
+}
+
+.chat .messages {
+  height: calc(100vh - 6em);
+  overflow: auto;
+}
+
+.chat .messages .message {
+  background: white;
+  margin: 1em;
+  padding: 0.5em;
+  border-radius: 10px;
+}
+
+.chat .send-message {
+  bottom: 1em;
+  left: 1em;
+  right: 1em;
+  display: flex;
+  position: absolute;
+  flex-grow: 1;
+  background: #efefef;
+  padding: 1em;
+}
+
+.chat .send-message input {
+  padding: 0.5em;
+  flex-grow: 1;
+}
+
+.chat .send-message button {
+  margin: 0;
+  padding: 0.5em 1em;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
