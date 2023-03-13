@@ -32,8 +32,10 @@ const MOVIES = [
     cast: "Idris Elba, John Cena, Thandiwe Newton",
     image: "/death-blow.jpg",
   },
-];
+]
 
 export default function App() {
-  return <div></div>;
+  return <div className="divide-y divide-slate-100 max-w-md m-auto mt-10 bg-white rounded-xl drop-shadow-xl">
+    <a className="block px-3 py-2 rounded-md bg-sky-500 text-white" href="https://reactjs-basis.vercel.app/oefeningen/denken-in-componenten" target="blank">Lees opdracht</a>
+  </div>
 }

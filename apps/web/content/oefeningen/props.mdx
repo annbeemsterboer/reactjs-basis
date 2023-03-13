@@ -1,6 +1,6 @@
 ---
 title: Props
-order: 5
+order: 7
 tags:
   - college 3
   - Props
@@ -8,12 +8,24 @@ imgSrc: /props.png
 summary: In deze oefening leer je wat props zijn en hoe je deze kunt doorgeven van een parent naar een child, en ze daar kunt gebruiken
 ---
 
+Html elementen hebben een aantal native eigenschappen oftewel props. Kijk maar eens naar dit voorbeeld:
+
+```jsx
+<a href='https://website.com' target='blank'>
+  Ga naar website.com
+</a>
+```
+
+In het element zijn de props 'href' en 'target' meegegeven.
+Omdat deze props onderdeel zijn van de W3C standaarden worden ze door browsers herkent.
+In React mag je voor custom componenten zelf de props bepalen.
+Binnen je compont kun je bijvoorbeeld de rendering laten afhangen van de props.
+
+Meer informatgie over props vind je in de [React docs](https://beta.reactjs.org/learn/passing-props-to-a-component).
+
 ## Links
 
-- [oefening CodesandBox](https://githubbox.com/competencefactory/basistraining-react/tree/main/oefeningen/props)
-- [oplossing CodesandBox](https://githubbox.com/competencefactory/basistraining-react/tree/main/oefeningen/props-oplossing)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=597837686&machine=basicLinux32gb&devcontainer_path=.devcontainer%2Fprops%2Fdevcontainer.json&location=WestEurope)
 
-## Alternatieven
-
-- [oefening StackBlitz](https://stackblitz.com/github/competencefactory/basistraining-react/tree/main/oefeningen/props?preset=node)
-- [oplossing StackBlitz](https://stackblitz.com/github/competencefactory/basistraining-react/tree/main/oefeningen/props-oplossing?preset=node)
+- [oefening CodesandBox](https://githubbox.com/annbeemsterboer/reactjs-basis/tree/main/oefeningen/props)
+- [oplossing CodesandBox](https://githubbox.com/annbeemsterboer/reactjs-basis/tree/main/oefeningen/props-oplossing)

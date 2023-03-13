@@ -1,8 +1,8 @@
-import { allAssignments } from "../.contentlayer/generated";
-import { pick } from "contentlayer/client";
-import { InferGetStaticPropsType } from "next";
-import { AssignmentCard } from "../components/AssignmentCard";
-import Container from "../components/Container";
+import { allAssignments } from "../.contentlayer/generated"
+import { pick } from "contentlayer/client"
+import { InferGetStaticPropsType } from "next"
+import { AssignmentCard } from "../components/AssignmentCard"
+import Container from "../components/Container"
 
 export default function Web({
   assignments,
@@ -30,17 +30,17 @@ export default function Web({
         </div>
       </article>
     </Container>
-  );
+  )
 }
 
 export function getStaticProps() {
   const assignments = allAssignments.map((assignment) =>
     pick(assignment, ["slug", "title", "imgSrc", "summary", "order", "tags"])
-  );
+  )
 
   const sorted = assignments.sort((a, b) => {
-    return a.order - b.order;
-  });
+    return a.order - b.order
+  })
 
-  return { props: { assignments } };
+  return { props: { assignments: sorted } }
 }
