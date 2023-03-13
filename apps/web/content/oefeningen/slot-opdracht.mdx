@@ -19,9 +19,207 @@ tijdens deze cursis behandelt zijn. Denk hierbij aan:
 Met deze technieken in het achterhoofd gaan we het begin van
 een chat applicatie maken!
 
+Stap 1: Nieuw React Project. Maak een [nieuw react project op CodesandBox](https://githubbox.com/annbeemsterboer/reactjs-basis/tree/main/oefeningen/template).
+
+Stap 2: Inrichten componenten en App. Maak in de 'src' folder een nieuw folder genaamd 'components'.
+
+Voeg een nieuw bestand toe genaamd 'ContactList.js' en voeg de volgende jsx toe:
+
+```jsx
+export default function ContactList({
+  selectedContact,
+  contacts,
+  onSelect
+}) {
+  return (
+    <section className="contact-list">
+      <ul>
+        {contacts.map(contact =>
+          <li key={contact.id}>
+            <button>
+              {contact.name}
+            </button>
+          </li>
+        )}
+      </ul>
+    </section>
+  )
+}
+```
+
+Voeg nog een bestand toe aan de 'Components' folder.  Noem deze 'Chat.js' en voeg de volgende jsx toe:
+
+```jsx
+import { useState } from "react"
+
+export default function Chat({ myId, contact, messages, onSend }) {
+  const [text, setText] = useState('')
+
+  return (
+    <section className="chat">
+      <div className="messages">
+        {
+          messages.map(m =>
+            <div className="message" key={m.id}>
+              {m.text}
+            </div>)
+        }
+      </div>
+      <div className="send-message">
+        <input value={text}
+          placeholder={'Chat met ' + contact.name}
+          onChange={e => setText(e.target.value)} />
+        <button>&rarr;</button>
+      </div>
+    </section>
+  )
+}
+```
+
+Pas nu 'App.css' aan in de 'src' folder, en overschrijf dit met deze css:
+
+```css
+.container {
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.contact-list {
+  height: 100vh;
+  width: 10em;
+  background: #fff;
+}
+
+.contact-list button {
+  flex-grow: 1;
+  margin: 0;
+  padding: 0.5em;
+  border: none;
+  background: #fff;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.contact-list button:hover, button.active {
+  background: #efefef;
+}
+
+.chat {
+  position: relative;
+  width: calc(100vw - 10em);
+  height: calc(100vh - 6em);
+  padding-bottom: 6em;
+  background-color: #efeae2;
+  background-image: url("./bg-chat.png");
+}
+
+.chat .messages {
+  height: calc(100vh - 6em);
+  overflow: auto;
+}
+
+.chat .messages .message {
+  background: white;
+  margin: 1em;
+  padding: 0.5em;
+  border-radius: 10px;
+}
+
+.chat .send-message {
+  bottom: 1em;
+  left: 1em;
+  right: 1em;
+  display: flex;
+  position: absolute;
+  flex-grow: 1;
+  background: #efefef;
+  padding: 1em;
+}
+
+.chat .send-message input {
+  padding: 0.5em;
+  flex-grow: 1;
+}
+
+.chat .send-message button {
+  margin: 0;
+  padding: 0.5em 1em;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+```
+
+Voeg deze css toe aan 'index.css':
+
+```css
+ul {
+  min-width: 10em;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+li {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+```
+
+Ten slotte passen we 'App.js' aan met deze jsx:
+
+```jsx
+import React, { useState } from "react"
+
+import Chat from "./components/Chat"
+import ContactList from "./components/ContactList"
+
+import "./App.css"
+
+/* slotopdracht: Bouw het begin van een chat applicatie*/
+
+function App() {
+  const myId = 0
+  const [contact, setConctact] = useState(contacts[0])
+  const [chatMessages, setChatMessages] = useState(messages)
+
+  return (
+    <div className="container">
+      <ContactList
+        contacts={contacts}
+        selectedContact={contact}
+      />
+      <Chat key={contact.id} myId={myId} contact={contact} messages={chatMessages} />
+    </div>
+  )
+}
+
+export default App
+
+const contacts = [
+  { id: 1, name: 'Ernst' },
+  { id: 2, name: 'Rebecca' },
+  { id: 3, name: 'Jaap' }
+]
+
+const messages = [
+  { id: 0, from: 0, to: 1, text: 'Hallo, hoe gaat het ermee?' },
+  { id: 1, from: 1, to: 0, text: 'Gaat goed hier!' }
+]
+```
+
+De basis van de chat applicatie hebben we neergezet. Voeg de volgende functionaliteiten toe:
+
+- Oefening 1: een chat selecteren en de juiste berichten tonen.
+- Oefening 2: het versturen van nieuwe berichten.
+
 ## Links
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=597837686&machine=basicLinux32gb&devcontainer_path=.devcontainer%2Fslot-opdracht%2Fdevcontainer.json&location=WestEurope)
 
-- [oefening CodesandBox](https://githubbox.com/annbeemsterboer/reactjs-basis/tree/main/oefeningen/slot-opdracht)
 - [oplossing CodesandBox](https://githubbox.com/annbeemsterboer/reactjs-basis/tree/main/oefeningen/slot-opdracht-oplossing)
