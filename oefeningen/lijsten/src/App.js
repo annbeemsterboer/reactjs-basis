@@ -5,6 +5,16 @@ const LIJST = [
   1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20,
 ];
 
+export default function App() {
+  return (
+    <ul>
+      <li>1</li>
+      <li>2</li>
+      <li>enz...</li>
+    </ul>
+  );
+}
+
 // oefening 1: toon alle getallen in een lijst, gebruik hiervoor de
 // html elementen <li> en <ul>.
 
