@@ -4,8 +4,8 @@
   "hostRequirements": {
     "cpus": 4
   },
-  "workspaceFolder": "/workspace",
-  "workspaceMount": "source=${localWorkspaceFolder}/oefeningen/createElement,target=/workspace,type=bind,consistency=cached",
+  "workspaceFolder": "/create-element",
+  "workspaceMount": "source=${localWorkspaceFolder}/oefeningen/createElement,target=/create-element,type=bind,consistency=cached",
   "portsAttributes": {
     "3000": {
       "label": "Web applicatie",
