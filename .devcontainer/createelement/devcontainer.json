@@ -14,7 +14,7 @@
   },
   "forwardPorts": [3000],
   "waitFor": "onCreateCommand",
-  "updateContentCommand": "yarn install",
+  "postCreateCommand": "yarn install",
   "postAttachCommand": {
     "server": "yarn start"
   },
