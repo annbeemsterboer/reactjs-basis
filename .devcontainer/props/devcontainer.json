@@ -6,5 +6,10 @@
     "forwardPorts": [3000],
     "postCreateCommand": "yarn install",
     "postAttachCommand": "yarn dev",
-    "remoteUser": "node"
+    "remoteUser": "node",
+    "customizations": {
+        "codespaces": {
+            "openFiles": ["src/App.js"]
+        }
+    }
 }
