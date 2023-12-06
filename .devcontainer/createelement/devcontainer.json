@@ -15,6 +15,9 @@
   "forwardPorts": [3000],
   "waitFor": "onCreateCommand",
   "updateContentCommand": "yarn install",
+  "postAttachCommand": {
+    "server": "yarn start"
+  },
   "customizations": {
     "codespaces": {
       "openFiles": ["src/index.js"]
