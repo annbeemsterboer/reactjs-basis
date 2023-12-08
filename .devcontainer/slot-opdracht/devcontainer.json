@@ -1,15 +1,24 @@
 {
-    "name": "Node.js",
-    "image": "mcr.microsoft.com/devcontainers/javascript-node:0-18-bullseye",
-    "workspaceFolder": "/workspace",
-    "workspaceMount": "source=${localWorkspaceFolder}/oefeningen/slot-opdracht,target=/workspace,type=bind,consistency=cached",
-    "forwardPorts": [3000],
-    "postCreateCommand": "yarn install",
-    "postAttachCommand": "yarn start",
-    "remoteUser": "node",
-    "customizations": {
-        "codespaces": {
-            "openFiles": ["src/App.js"]
-        }
+  "name": "Slot opdracht",
+  "workspaceFolder": "/slot-opdracht",
+  "workspaceMount": "source=${localWorkspaceFolder}/oefeningen/slot-opdracht,target=/slot-opdracht,type=bind,consistency=cached",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "waitFor": "onCreateCommand",
+  "postCreateCommand": "yarn install",
+  "postAttachCommand": "yarn start",
+  "hostRequirements": {
+    "cpus": 4
+  },
+  "portsAttributes": {
+    "3000": {
+      "label": "Web applicatie",
+      "onAutoForward": "openPreview"
     }
+  },
+  "forwardPorts": [3000],
+  "customizations": {
+    "codespaces": {
+      "openFiles": ["src/App.js"]
+    }
+  }
 }

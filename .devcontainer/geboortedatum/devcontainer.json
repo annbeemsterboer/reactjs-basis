@@ -1,11 +1,14 @@
 {
     "name": "Webformulier met JSX oefening",
+    "workspaceFolder": "/webformulier",
+    "workspaceMount": "source=${localWorkspaceFolder}/oefeningen/geboortedatum,target=/webformulier,type=bind,consistency=cached",
     "image": "mcr.microsoft.com/devcontainers/universal:2",
+    "waitFor": "onCreateCommand",
+    "postCreateCommand": "yarn install",
+    "postAttachCommand": "yarn start",
     "hostRequirements": {
       "cpus": 4
     },
-    "workspaceFolder": "/webformulier",
-    "workspaceMount": "source=${localWorkspaceFolder}/oefeningen/geboortedatum,target=/webformulier,type=bind,consistency=cached",
     "portsAttributes": {
       "3000": {
         "label": "Web applicatie",
@@ -13,12 +16,9 @@
       }
     },
     "forwardPorts": [3000],
-    "waitFor": "onCreateCommand",
-    "postCreateCommand": "yarn install",
-    "postAttachCommand": "yarn start",
     "customizations": {
       "codespaces": {
-        "openFiles": ["src/index.js"]
+        "openFiles": ["src/App.js"]
       }
     }
   }
