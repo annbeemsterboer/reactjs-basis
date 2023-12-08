@@ -5,7 +5,7 @@
       "cpus": 4
     },
     "workspaceFolder": "/webformulier",
-    "workspaceMount": "source=${localWorkspaceFolder}/oefeningen/geboortedatum,target=/workspace,type=bind,consistency=cached",
+    "workspaceMount": "source=${localWorkspaceFolder}/oefeningen/geboortedatum,target=/webformulier,type=bind,consistency=cached",
     "portsAttributes": {
       "3000": {
         "label": "Web applicatie",
