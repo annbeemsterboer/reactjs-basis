@@ -1,0 +1,24 @@
+{
+  "name": "Nieuw project",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "hostRequirements": {
+    "cpus": 4
+  },
+  "workspaceFolder": "/nieuw-project",
+  "workspaceMount": "source=${localWorkspaceFolder}/oefeningen/template,target=/nieuw-project,type=bind,consistency=cached",
+  "portsAttributes": {
+    "3000": {
+      "label": "Web applicatie",
+      "onAutoForward": "openPreview"
+    }
+  },
+  "forwardPorts": [3000],
+  "waitFor": "onCreateCommand",
+  "postCreateCommand": "yarn install",
+  "postAttachCommand": "yarn start",
+  "customizations": {
+    "codespaces": {
+      "openFiles": ["src/index.js"]
+    }
+  }
+}
