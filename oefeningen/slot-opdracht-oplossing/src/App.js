@@ -12,7 +12,7 @@ function App() {
   const [contact, setConctact] = useState(contacts[0])
   const [chatMessages, setChatMessages] = useState(messages)
 
-  const fitleredMessages = chatMessages
+  const filteredMessages = chatMessages
     .filter(m => m.to === contact.id || m.from === contact.id)
     .sort((m1, m2) => m1.id - m2.id)
 
@@ -36,7 +36,7 @@ function App() {
         selectedContact={contact}
         onSelect={contact => setConctact(contact)}
       />
-      <Chat key={contact.id} myId={myId} contact={contact} messages={fitleredMessages} onSend={onSend} />
+      <Chat key={contact.id} myId={myId} contact={contact} messages={filteredMessages} onSend={onSend} />
     </div>
   )
 }
@@ -44,8 +44,8 @@ function App() {
 export default App
 
 const contacts = [
-  { id: 1, name: 'Ernst' },
-  { id: 2, name: 'Rebecca' },
+  { id: 1, name: 'Karel' },
+  { id: 2, name: 'Ernst' },
   { id: 3, name: 'Jaap' }
 ]
 

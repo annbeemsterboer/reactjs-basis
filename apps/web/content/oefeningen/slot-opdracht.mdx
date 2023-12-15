@@ -19,14 +19,19 @@ tijdens deze cursis behandelt zijn. Denk hierbij aan:
 Met deze technieken in het achterhoofd gaan we het begin van
 een chat applicatie maken!
 
-Stap 1: Nieuw React Project. Maak een [nieuw react project op CodesandBox](https://githubbox.com/annbeemsterboer/reactjs-basis/tree/main/oefeningen/template).
+#### Stap 1: Nieuw React Project.
 
-Alternatief, gebruikt de command line op je lokale machine om een nieuw project te starten. Voer deze opdracht uit:
-`npx create-react-app slot-opdracht`
+A: Online via [CodesandBox](https://githubbox.com/annbeemsterboer/reactjs-basis/tree/main/oefeningen/template).
 
-Stap 2: Inrichten componenten en App. Maak in de 'src' folder een nieuw folder genaamd 'components'.
+B: Lokale machine
+Voer deze opdracht uit in de terminal: `npx create-react-app slot-opdracht`.
+Vervolgens `cd slot-opdracht` en voer deze opdracht uit:
+`npm i -D @babel/plugin-proposal-private-property-in-object eslint-config-react-app`
 
-Voeg een nieuw bestand toe genaamd 'ContactList.js' en voeg de volgende jsx toe:
+#### Stap 2: Inrichten componenten en App.
+
+Maak in de 'src' folder een nieuw folder genaamd 'components'.
+Voeg een nieuw bestand toe genaamd 'ContactList.js' en voeg de volgende inhoud toe:
 
 ```jsx
 export default function ContactList({
@@ -50,7 +55,7 @@ export default function ContactList({
 }
 ```
 
-Voeg nog een bestand toe aan de 'Components' folder.  Noem deze 'Chat.js' en voeg de volgende jsx toe:
+Voeg nog een bestand toe aan de 'Components' folder.  Noem deze 'Chat.js' en voeg de volgende inhoud toe:
 
 ```jsx
 import { useState } from "react"
@@ -117,7 +122,7 @@ Pas nu 'App.css' aan in de 'src' folder, en overschrijf dit met deze css:
   height: calc(100vh - 6em);
   padding-bottom: 6em;
   background-color: #efeae2;
-  background-image: url("./bg-chat.png");
+  background-image: url("./assets/bg-chat.png");
 }
 
 .chat .messages {
@@ -174,7 +179,7 @@ li {
 }
 ```
 
-Ten slotte passen we 'App.js' aan met deze jsx:
+Ten slotte passen we 'App.js' aan met deze inhoud:
 
 ```jsx
 import React, { useState } from "react"
@@ -188,7 +193,7 @@ import "./App.css"
 
 function App() {
   const myId = 0
-  const [contact, setConctact] = useState(contacts[0])
+  const [contact, setContact] = useState(contacts[0])
   const [chatMessages, setChatMessages] = useState(messages)
 
   return (
@@ -205,8 +210,8 @@ function App() {
 export default App
 
 const contacts = [
-  { id: 1, name: 'Ernst' },
-  { id: 2, name: 'Rebecca' },
+  { id: 1, name: 'Karel' },
+  { id: 2, name: 'Tessa' },
   { id: 3, name: 'Jaap' }
 ]
 
@@ -216,10 +221,22 @@ const messages = [
 ]
 ```
 
-De basis van de chat applicatie hebben we neergezet. Voeg de volgende functionaliteiten toe:
+Maak in de map 'src' nog een folder genaamd 'assets'. Download deze afbeelding de 'assets' folder: [bg-chat.png](/bg-chat.png)
 
-- Oefening 1: een chat selecteren en de juiste berichten tonen.
-- Oefening 2: het versturen van nieuwe berichten.
+De basis van de chat applicatie hebben we neergezet.
+
+#### Opdrachten:
+
+- Oefening 1:
+  - Een chat selecteren door op een contact te klikken.
+  - Zorg dat de juiste berichten getoond worden als je op een contact klikt.
+- Oefening 2:
+  - Zorg dat je een bericht kan versturen.
+  - Toon het bericht in de chat.
+- Extra:
+  - Laat in de chat zien wie het bericht heeft verstuurd.
+  - Voeg een knop toe waarmee een nieuwe chat gestart kan worden. (laat bijvoorbeeld de naam invoeren via een een prompt)
+  - Voeg de mogelijkheid toe om een plaatje te sturen.
 
 ## Links
 
