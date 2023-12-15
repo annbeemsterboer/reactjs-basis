@@ -13,6 +13,7 @@ import "./index.css";
 ReactDOM.render(
   React.createElement("div", {
     className: "card",
-  }),
+  },
+  React.createElement("h1", null, "Hello World")),
   document.getElementById("root")
 );
