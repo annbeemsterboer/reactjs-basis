@@ -2,6 +2,8 @@ import './App.css';
 import { useState } from 'react';
 
 export default function Form() {
+  // Deel 1: Update state met een object
+  // Deel 2: Deel state met componenten
   const [person, setPerson] = useState({
     firstName: 'John',
     lastName: 'Doe',
