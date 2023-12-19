@@ -23,8 +23,8 @@ function App() {
   )
 }
 
-// oefening 2: maak het vierkant interactief. Zorg ervoor dat jouw code de volgende
-// events mbt het vierkant kan afhandelen:
+// oefening 2: maak het vierkant interactief. Gebruik onderstaande App component.
+// Zorg ervoor dat jouw code de volgende events mbt het vierkant kan afhandelen:
 // event 1: onMouseEnter, log naar de console: `Aangeraakt!`
 // event 2: onDoubleClick, log naar de console: `Jij bent m!`
 // event 3: onKeyDown, log naar de console: `Toets!`
